@@ -41,15 +41,17 @@ for image_file in os.listdir(IMAGES_DIR):
         else:
             description_content = "No description available."
 
-        # Prepare the markdown content with YAML front matter.
-        markdown_content = f"""---title: "{base}"
-            image: "{image_path}"
-            description: |
-            {description_content}
-            layout: gallery_item
-            ---
+        # Precompute the fixed description string
+        fixed_description = description_content.replace("\n", "\n  ")
 
-            <!-- You can add additional markdown content here if needed. -->"""
+        # Prepare the markdown content with YAML front matter.
+        markdown_content = f"""---
+title: "{base}"
+image: "{image_path}"
+description: |
+  {fixed_description}
+layout: gallery_item
+---"""
         # Write to a file in the _gallery directory
         output_file = os.path.join(OUTPUT_DIR, f"{base}.md")
         with open(output_file, "w", encoding="utf-8") as out_f:
