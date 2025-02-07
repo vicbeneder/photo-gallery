@@ -1,0 +1,16 @@
+<!-- index.html -->
+---
+layout: default
+title: Home
+---
+
+<section class="gallery">
+  {% for item in site.gallery %}
+    <div class="gallery-thumbnail">
+      <a href="{{ item.url | relative_url }}">
+        <img src="{{ item.image | relative_url }}" alt="{{ item.title }}">
+        <h3>{{ item.title }}</h3>
+      </a>
+    </div>
+  {% endfor %}
+</section>
