@@ -1,6 +1,6 @@
 title: Mushroom Gallery
 description: A simple, neutral website showcasing images of mushrooms.
-baseurl: "photo-gallery"    # leave empty or set if the site is served from a subpath
+baseurl: "/photo-gallery"    # leave empty or set if the site is served from a subpath
 url: "https://vicbeneder.github.io/"  # update with your GitHub Pages URL
 
 collections:
