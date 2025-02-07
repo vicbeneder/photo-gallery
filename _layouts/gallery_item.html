@@ -2,7 +2,7 @@
 layout: default
 ---
 <article class="gallery-item">
-  <h2>{{ page.title }}</h2>
+  <h2>{{ page.title | replace:"_"," " }}</h2>
   <img src="{{ page.image | relative_url }}" alt="{{ page.title }}">
   <div class="description">
     {{ page.description | markdownify }}
