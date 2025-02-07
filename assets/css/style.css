@@ -1,46 +1,100 @@
-body {
-    font-family: Arial, sans-serif;
+/* Reset and Base Styles */
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    line-height: 1.6;
   }
   
-  header, footer {
-    background: #f4f4f4;
-    padding: 1em;
+  body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: #fff;
+    color: #333;
+    line-height: 1.6;
+    padding-bottom: 2rem;
+  }
+  
+  /* Header */
+  header {
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    padding: 1rem;
     text-align: center;
   }
   
+  header h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Gallery Grid on the Landing Page */
   .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1em;
-    padding: 1em;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    padding: 1.5rem;
   }
   
+  /* Each Gallery Thumbnail */
   .gallery-thumbnail {
-    text-align: center;
+    overflow: hidden;
+    border: 1px solid #eee;
+    background-color: #fafafa;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .gallery-thumbnail:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  
+  .gallery-thumbnail a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
   }
   
   .gallery-thumbnail img {
-    max-width: 100%;
-    height: auto;
+    width: 100%;
     display: block;
-    margin: 0 auto;
+    transition: transform 0.3s ease;
   }
   
+  .gallery-thumbnail:hover img {
+    transform: scale(1.05);
+  }
+  
+  /* Gallery Item Titles and (optional) Descriptions */
+  .gallery-thumbnail h3 {
+    padding: 0.5rem;
+    font-size: 1.1rem;
+    text-align: center;
+    background-color: #fff;
+    border-top: 1px solid #eee;
+  }
+  
+  /* Gallery Item Page (Individual Item) */
   .gallery-item {
-    padding: 1em;
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
   }
   
   .gallery-item img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
     display: block;
-    margin-bottom: 1em;
+    margin-bottom: 1rem;
   }
   
-  .description {
-    white-space: pre-wrap;
+  /* Footer */
+  footer {
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
   }
   
