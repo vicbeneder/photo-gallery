@@ -3,6 +3,8 @@ layout: default
 title: Home
 ---
 
+<p>Number of gallery items: {{ site.gallery | size }}</p>
+
 <section class="gallery">
   {% for item in site.gallery %}
     <div class="gallery-thumbnail">
